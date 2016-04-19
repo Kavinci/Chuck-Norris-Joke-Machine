@@ -37,7 +37,7 @@ function twitter(text){
 }
 
 function facebook(){
- var fbPost = "https://www.facebook.com/dialog/share?app_id=241657646188348&display=popup&href=http%3A%2F%2Futterback.co%2Fcnjm.html&redirect_uri=https%3A%2F%2Fwww.facebook.com&quote=" + text;
+ var fbPost = "https://www.facebook.com/dialog/share?app_id={appIDgoesherewithoutbrackets}&display=popup&href=http%3A%2F%2Futterback.co%2Fcnjm.html&redirect_uri=https%3A%2F%2Fwww.facebook.com&quote=" + text;
  $("#facebook").attr('xlink:href', fbPost);
 }
 
