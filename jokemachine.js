@@ -32,11 +32,13 @@ function getQuote() {
 }
 
 function twitter(text){
+  text = text.replace(/&quot;/g, "%22");//twitter recognizes %22 but not &quot;
   var tweet = 'https://twitter.com/intent/tweet?text=' + text;
   $("#tweet").attr('xlink:href', tweet);
 }
 
 function facebook(){
+ text = text.replace(/&quot;/g, "%22");//facebook recognizes %22 but not &quot;
  var fbPost = "https://www.facebook.com/dialog/share?app_id={appIDgoesherewithoutbrackets}&display=popup&href=http%3A%2F%2Futterback.co%2Fcnjm.html&redirect_uri=https%3A%2F%2Fwww.facebook.com&quote=" + text;
  $("#facebook").attr('xlink:href', fbPost);
 }
